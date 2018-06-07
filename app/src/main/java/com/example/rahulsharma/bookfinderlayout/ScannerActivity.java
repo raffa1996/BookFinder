@@ -15,8 +15,7 @@ import com.example.rahulsharma.bookfinderlayout.GraphicOverlay;
 import com.example.rahulsharma.bookfinderlayout.OcrDetectorProcessor;
 import com.example.rahulsharma.bookfinderlayout.OcrGraphic;
 
-import com.facebook.rebound.Spring;
-import com.facebook.rebound.SpringSystem;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -34,10 +33,9 @@ public class ScannerActivity extends AppCompatActivity implements BarcodeReader.
     private static final String LOG_TAG = ScannerActivity.class.getSimpleName();
     private BarcodeReader mBarcodeReader;
     public static final String BarcodeObject = "String";
-    private SpringSystem mSpringSystem;
     private boolean isPaused = false;
     private static final int RC_BAR_CAPTURE = 9005;
-    private Spring mSpring;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

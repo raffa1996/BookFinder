@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.CompoundButton;
@@ -17,7 +18,7 @@ import com.example.rahulsharma.bookfinderlayout.R;
 public class MainActivity extends AppCompatActivity {
 
     private EditText textValue;
-    ImageButton Camera, search, Barcode;
+    Button Camera, search, Barcode;
     private static final int RC_OCR_CAPTURE = 9003;
     private static final int RC_BAR_CAPTURE = 9005;
     private static final String TAG = "MainActivity";
@@ -29,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Barcode = (ImageButton) findViewById (R.id.barcode);
+        Barcode = (Button) findViewById (R.id.barcode);
         textValue = (EditText) findViewById(R.id.text_value);
 
-        Camera = (ImageButton) findViewById (R.id.camera);
-        search = (ImageButton) findViewById (R.id.search);
+        Camera = (Button) findViewById (R.id.camera);
+        search = (Button) findViewById (R.id.search);
         Camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,9 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
             textValue.setVisibility(View.GONE);
 
+
         } else {
 
             textValue.setVisibility(View.VISIBLE);
+
         }
     }
 
